@@ -10,7 +10,10 @@ public class StackArray implements Stack{
         stack.add(0,item);
     }
     @Override
-    public Object pop() {
+    public Object pop() throws MyEmptyStackExeption {
+        if (this.isEmpty()) {
+            throw new MyEmptyStackExeption("Stack is empty, you can not pop anything")
+        }
         return stack.remove(0);
     }
     @Override

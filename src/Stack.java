@@ -1,7 +1,7 @@
 public interface Stack {
 
     void push(Object item);
-    Object pop();
+    Object pop() throws MyEmptyStackExeption;
     void peek();
     boolean isEmpty();
 
